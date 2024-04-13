@@ -17,24 +17,24 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-    <!--Note: City search Section-->
-    <div>
+  <div class="mainContainer">
+    <!--Note: City weather search section (search navigation & pre-made city buttons)-->
+    <section class="searchSection">
         <h2 class="cityHeader">Search for a City:</h2>
-        <!--FixMe "Search for a City" left side of page, want a search field to look up the city with a search button directly below it-->
-        <!--FixMe: want a line seperation between top three element and the following:-->
-        <!--FixMe: Have a few major cities across the U.S. already listed and when you click on their buttons the 5 day forcast appears-->
-        <!--Note: Search Bar-->
-        <nav class="navbar bg-body-tertiary">
+
+        <!--Note: City Weather Search Bar-->
+        <!--ToDo: Program search bar & submit button to search for a city user has input-->
+        <nav class="navbar bg-body-tertiary" id="searchArea">
             <div class="container-fluid">
-              <form class="d-flex" role="search">
+              <form class="d-flex" role="search" id="searchBar">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
               </form>
             </div>
-        </nav> <br>
+        </nav><br>
 
-        <!--Note: Buttons for Cities?-->
-        <!--ToDo: Find another button layout? Maybe do a clickable list?-->
+        <!--Note: Buttons for Pre-set Cities-->
+        <!--ToDo: program buttons to bring up weather information-->
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">New York City</button><br>
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">Washington D.C.</button><br>
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">Orlando</button><br>
@@ -44,25 +44,29 @@
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">Phoenix</button><br>
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">San Francisco</button><br>
         <button type="button" class="btn btn-outline-secondary" id="cityBtn">Los Angeles</button><br>
-    </div>
+      </section>
 
     <!--Today's Weather-->
-    <div>
+    <section class="todayWthr">
         <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">City</h5>
+              <h5>Date</h5>
+              <p class="card-text">
+                <ul>
+                  <li>Temperature:</li>
+                  <li>Wind:</li>
+                  <li>Humidity:</li>
+                </ul>
+              </p>
             </div>
           </div>
         <!--FixMe: Want a box section that has the City and current date next to it-->
-            <!--FixMe: *Current TEMP*-->
-            <!--FixMe: *WIND*-->
-            <!--FixMe: *HUMIDITY*-->
-    </div>
+      </section>
 
 
     <!--5 day weather-->
-    <div>
+    <section class="fiveDay">
         <!--FixMe: want to use "cards"-->
         <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -104,9 +108,9 @@
             </div>
         </div>  
         
-    </div>
+      </section>
 
-
+  </div>
 
 
 

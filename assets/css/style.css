@@ -6,7 +6,7 @@
     margin-right: 5px;
 }
 
-/* Header Design */
+/* Header Design for top of webpage*/
 .header {
     background: linear-gradient(to right, #1b15df, #100a58);
     font-family:monospace;
@@ -17,18 +17,67 @@
     margin: 5px;
 }
 
-/* Search area */
-.cityHeader{
+/*Layout for the three sections (search on the left, Today's weather to the right & at the top, 5 day outlook below Todays weather)*/
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.searchSection {
+    width: 30%;
+}
+
+.todayWthr {
+    width: 70%;
+}
+
+.fiveDay {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 30px;
+    flex: 1;
+}
+
+/* Section for the search bar & pre-made city buttons*/
+
+/* Search for a city design code */
+.cityHeader {
     font-family: monospace;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     margin-top: 10px;
     margin-left: 10px;
 }
 
+/* Search Bar for City Weather */
+#searchBar {
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Search Button */
+#searchBtn {
+    font-family: monospace;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(15, 15, 243);
+    margin-top: 10px;
+}
+
+/* Line under search button */
+/* ToDo: need to have line same width as the search bar */
+#searchArea {
+    border-bottom: 5px solid gray;
+}
+
 /*Pre-made City Buttons*/
 #cityBtn {
+    font-family: monospace;
     font-size: 25px;
     margin-left: 10px;
     margin-bottom: 10px;
+    width: 400px;
 }
