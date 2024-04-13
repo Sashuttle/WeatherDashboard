@@ -1,0 +1,34 @@
+/* Border for the entire body of webpage */
+.body{
+    border: 3px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Header Design */
+.header {
+    background: linear-gradient(to right, #1b15df, #100a58);
+    font-family:monospace;
+    font-size:large;
+    color: white;
+    text-align: right;
+    padding: 10px 300px;
+    margin: 5px;
+}
+
+/* Search area */
+.cityHeader{
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*Pre-made City Buttons*/
+#cityBtn {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
