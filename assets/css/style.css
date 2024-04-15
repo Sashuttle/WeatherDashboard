@@ -1,4 +1,4 @@
-/* Border for the entire body of webpage */
+/* Note:Border for the entire body of webpage */
 .body{
     border: 3px solid black;
     margin-top: 5px;
@@ -6,7 +6,7 @@
     margin-right: 5px;
 }
 
-/* Header Design for top of webpage*/
+/* Note: Header Design for top of webpage*/
 .header {
     background: linear-gradient(to right, #1b15df, #100a58);
     font-family:monospace;
@@ -17,29 +17,24 @@
     margin: 5px;
 }
 
-/*Layout for the three sections (search on the left, Today's weather to the right & at the top, 5 day outlook below Todays weather)*/
-.mainContainer {
-    display: flex;
-    flex-wrap: wrap;
+/* Note:General layout for the three sections*/
+/* Code to have the sections sit side by side */
+.searchContainer, .weatherContainer {
+    float: left;
+    box-sizing: border-box;
 }
 
-.searchSection {
-    width: 30%;
+/* Width for the Search Section sits on the left*/
+.searchContainer {
+    width: 25%;
 }
 
-.todayWthr {
-    width: 70%;
+/* Width for the weather section sits on the right*/
+.weatherContainer {
+    width: 75%;
 }
 
-.fiveDay {
-    width: 70%;
-    margin-top: 20px;
-    margin-left: 30px;
-    flex: 1;
-}
-
-/* Section for the search bar & pre-made city buttons*/
-
+/* Note: Section for the search bar & pre-made city buttons*/
 /* Search for a city design code */
 .cityHeader {
     font-family: monospace;
@@ -51,7 +46,7 @@
 
 /* Search Bar for City Weather */
 #searchBar {
-    width:400px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -74,10 +69,31 @@
 }
 
 /*Pre-made City Buttons*/
+/*FixMe: these need to be history buttons? */
 #cityBtn {
     font-family: monospace;
     font-size: 25px;
     margin-left: 10px;
     margin-bottom: 10px;
-    width: 400px;
+    width: 350px;
 }
+
+/* Note:Today's Weather & 5 day outlook sections */
+/* Today weather styling code */
+#todayWthr {
+    font-family: monospace;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Code to have 5 day "cards" sit next to each other in a row */
+#fiveDay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); 
+    grid-gap: 10px;
+}
+
+#fiveText {
+    text-align: left;
+}
+
