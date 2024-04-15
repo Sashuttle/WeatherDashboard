@@ -17,9 +17,9 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-  <div class="mainContainer">
+  <div>
     <!--Note: City weather search section (search navigation & pre-made city buttons)-->
-    <section class="searchSection">
+    <section class="searchContainer">
         <h2 class="cityHeader">Search for a City:</h2>
 
         <!--Note: City Weather Search Bar-->
@@ -47,8 +47,8 @@
       </section>
 
     <!--Today's Weather-->
-    <section class="todayWthr">
-        <div class="card">
+    <section class="weatherContainer" id="todayWthr">
+        <div class="card" id="weather-info">
             <div class="card-body">
               <h5 class="card-title">City</h5>
               <h5>Date</h5>
@@ -66,64 +66,79 @@
 
 
     <!--5 day weather-->
-    <section class="fiveDay">
+    <section class="weatherContainer" id="fiveDay">
         <!--FixMe: want to use "cards"-->
         <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text" id="fiveText">
+                <ul>
+                  <li>Temperature:</li>
+                  <li>Wind:</li>
+                  <li>Humidity:</li>
+                </ul>
+              </p>
             </div>
         </div>
 
         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text" id="fiveText">
+              <ul>
+                <li>Temperature:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+            </p>
+          </div>
+      </div>
 
         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text" id="fiveText">
+              <ul>
+                <li>Temperature:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+            </p>
+          </div>
         </div>  
         
-      </section>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text" id="fiveText">
+              <ul>
+                <li>Temperature:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+            </p>
+          </div>
+        </div>
 
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text" id="fiveText">
+              <ul>
+                <li>Temperature:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+    </section>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--Note: JavaScript & jQuery Source Code-->
