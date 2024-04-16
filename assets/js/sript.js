@@ -2,12 +2,13 @@
 const APIKey = "7df12cb46de7a3afe299788affb9ac22";
 const queryURL = `api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
 
-//Search input, search button, and weather info
+//Search input, search button, city button, and weather info
 const form = document.getElementById ('searchBar');
 const input = document.querySelector('input[type="search"]');
 const weatherInfo = document.querySelector('#weather-info');
+const cityBtnContainer = document.getElementById('cityBtn');
 
-//Search bar function code
+//Search bar function code + Current weather
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -58,7 +59,7 @@ function displayWeather(weatherData) {
         <h5 class="card-title">${cityName}</h5>
         <p class="card-text">
             <ul>
-                <li>Temperature: ${temperature}°C</li>
+                <li>Temperature: ${temperature}°F</li>
                 <li>Wind: ${windSpeed} m/s</li>
                 <li>Humidity: ${humidity}%</li>
             </ul>
@@ -94,4 +95,59 @@ function displayForecast(forecastData) {
     forecastContainer.innerHTML = forecastCardsHtml;
 }
 
-//FixMe  Add local storage here & 
+
+//Local Storage
+function saveToSearchHistory(cityName) {
+    let savedCities = JSON.parse(localStorage.getItem('savedCities')) || [];
+    if (!savedCities.includes(cityName)) {
+        savedCities.push(cityName);
+        localStorage.setItem('savedCities', JSON.stringify(savedCities));
+    }
+}
+
+function getSavedToSearchHistory() {
+    return JSON.parse(localStorage.getItem('savedCities')) || [];
+}
+
+window.addEventListener('load', function() {
+    const savedCities = getSavedToSearchHistory();
+});
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    const cityName = input.value.trim();
+
+    saveToSearchHistory(cityName);
+});
+
+//Search History Buttons
+//FixMe: Need to program the buttons to display weather information when clicked
+function createCityButton(cityName) {
+    const button = document.createElement('button');
+    button.textContent = cityName;
+    button.addEventListener('click', () => {
+        displayWeather(cityName);
+        displayForecast(cityName);
+    });
+
+    cityBtnContainer.appendChild(button);
+}
+
+function loadSavedCities() {
+    const savedCities = JSON.parse(localStorage.getItem('savedCities')) || [];
+    savedCities.forEach(cityName => {
+        createCityButton(cityName);
+    });
+}
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const cityName = input.value.trim();
+    saveToSearchHistory(cityName);
+    displayWeather(cityName);
+    displayForecast(cityName);
+});
+
+window.addEventListener('load', loadSavedCities);
+
+//ToDo: Need to go back through JavaScript code and look for possible duplicate code
